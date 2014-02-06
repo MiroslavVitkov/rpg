@@ -1,0 +1,12 @@
+0 - must have
+1 - essential
+2 - important
+3 - nice to have
+
+() - detailed personal combat
+() - fluent combat involvin 20 participants
+() - 2 weapons, sword and shield, swoed and spell
+() - close combat rules for range
+() - realisitc wound healing (months)
+() - short rules (10 pages)
+() - generic
