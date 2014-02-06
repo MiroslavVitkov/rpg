@@ -1,7 +1,7 @@
 all:
-	cd build && \
-	pdflatex ../latex/elementaris.tex && \
-	evince elementaris.pdf
+	cd latex && \
+	pdflatex --output-directory ../build/ elementaris.tex && \
+	evince ../build/elementaris.pdf
 
 clean:
 	@rm -f build/*
