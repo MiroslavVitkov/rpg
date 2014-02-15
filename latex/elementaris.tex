@@ -1,12 +1,12 @@
 \documentclass[10pt,a4paper,twoside,openany]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
-\title{Елементарис}
-\date{}  % don't print date on cover page
+\usepackage[pdftex]{graphicx}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}  % Horizontal line.
 
 % Document body.
 \begin{document}
-\maketitle
+\input{titlepage.tex}
 \include{character_creation_and_evolution}
 \include{combat_system}
 \include{magic_system}
