@@ -1,8 +1,23 @@
 \documentclass[10pt,a4paper,twoside,openany]{article}
+
+% Packages.
+% \usepackage[options]{names,comma,separated}
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
 \usepackage[pdftex]{graphicx}
+
+% Commands.
+% \newcommand{name}[num]{definition}
+\newcommand{\standout}[1]{\textbf #1}  % Anyone, who has read the rules, can skim through these sections for important information.
+
+% Environments.
+% \newenvironment{name}[num]{before}{after}
+\newenvironment{shortstory}{\itshape}{}  % Fluff material, to get the reader in the mood for the incoming section.
+
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}  % Horizontal line.
+\newcommand{\firstletter}{}  % Old book style huge, gorgeous first letter of the chapter.
+\newcommand{\mychapter}{}  % A subsection title with an optional accompaning image.
+\newcommand{\smallrules}{}  % Under a small heading, list consicely several unrelated rules (paragraphs).
 
 % Document body.
 \begin{document}
