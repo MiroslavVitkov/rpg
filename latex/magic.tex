@@ -4,50 +4,54 @@
 МТ 1/ден.                             \\
 МТ = ниво на умението.                \\
 
-
+% Template for spless.
+%\documentclass{article}
+%\usepackage{xparse}
+%\usepackage{ifmtarg}
+%\usepackage[T2A]{fontenc}
+%\usepackage[utf8]{inputenc}
+%
+%\ExplSyntaxOn
+%\makeatletter
+%\newcommand{\spell}[8]{
+%    \par\noindent\textbf{#1}
+%    \par\noindent\underline{0\ ниво}
+%    \@ifmtarg{#2}{\par\vspace{\topsep}}{\list_examples:n{#2}}
+%    \par\noindent\underline{1\ ниво}
+%    \@ifmtarg{#3}{\par\vspace{\topsep}}{\list_examples:n{#3}}
+%    \par\noindent\underline{2\ ниво}
+%    \@ifmtarg{#4}{\par\vspace{\topsep}}{\list_examples:n{#4}}
+%    \par\noindent\underline{3\ ниво}
+%    \@ifmtarg{#5}{\par\vspace{\topsep}}{\list_examples:n{#5}}
+%    \par\noindent\underline{4\ ниво}
+%    \@ifmtarg{#6}{\par\vspace{\topsep}}{\list_examples:n{#6}}
+%    \par\noindent\underline{5\ ниво}
+%    \@ifmtarg{#7}{\par\vspace{\topsep}}{\list_examples:n{#7}}
+%    \par\noindent\underline{6\ ниво}
+%    \@ifmtarg{#8}{\par\vspace{\topsep}}{\list_examples:n{#8}}
+%}
+%\makeatother
+%
+%\cs_new:Npn \list_examples:n #1{
+%    \seq_set_split:Nnn \splitted_seq{;}{#1}
+%    \begin{itemize}
+%        \seq_map_inline:Nn \splitted_seq{
+%            \item ##1
+%        }
+%    \end{itemize}
+%}
+%\ExplSyntaxOff
+%
+%
+%\begin{document}
+%
+%\spell{Small Heading}{example; example 2}{}{}{example 3}{}{}{}
+%
+%\end{document}
 
 \subsection{Заклинания} 
 
-% Template for spell powers.
-%\vspace{1cm}
-%\textbf{}            \\  % Small heading.
-%\underline{0 ниво}   \\  % Underlined, unindented.
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-%\underline{1 ниво}  \\
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-%\underline{2 ниво}  \\
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-%\underline{3 ниво}  \\
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-%\underline{4 ниво}  \\
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-%\underline{5 ниво}  \\
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-%\underline{6 ниво}  \\
-%\begin{itemize}
-  %\item{нишо}
-%\end{itemize}
-
-
-\textbf{Жизнена енергия}  \\ 
+\textbf{Жизнена енергия / Некромантия / Отвъд}  \\ 
 \underline{0 ниво} \\
 \underline{1 ниво} \\
 \begin{itemize}
@@ -85,7 +89,7 @@
 
 % template
 \vspace{1cm}
-\textbf{Гадание}  \\
+\textbf{Гадание / Пророчество (в пространството и времето)}  \\
 \underline{0 ниво}  \\
 \begin{itemize}
   \item{усещане позицията на предмет след докосване, до няколко километра}
@@ -159,11 +163,12 @@
 
 
 Бъдещи идеи:  \\
-Вятър (Ум) - мъгла, ниво 2 мълния щяти по Ум, високи.   \\
-Превръщане (Ум) - на предмети или същества в други.     \\
-Отвъд (Ум) - разговаряне с души, вдигане на мъртви.     \\
-Създаване - храна и вода, предмети и създания.          \\
-
+Вятър (Ум)        - мъгла, ниво 2 мълния щяти по Ум, високи.                                         \\
+Форма (Ум)        - превръщане на предмети или същества в други, промяна на показатели и размери     \\
+Отвъд (Ум)        - разговаряне с души, вдигане на мъртви.                                           \\
+Създаване (Ум)    - храна и вода, предмети и създания.                                               \\
+Миъл (Ум)         - отношение и спомени                                                              \\
+Tелепортация (Ум) - пътуване в този и други светове, с товари                                        \\
 
 
 
