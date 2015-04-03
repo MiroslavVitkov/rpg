@@ -7,50 +7,6 @@
 всеки хвърля срещу собственото парче трудност. Ако някой се провали,
 изричанеот се проваля и всеки търпи съответните щети.
 
-% Template for spless.
-%\documentclass{article}
-%\usepackage{xparse}
-%\usepackage{ifmtarg}
-%\usepackage[T2A]{fontenc}
-%\usepackage[utf8]{inputenc}
-%
-%\ExplSyntaxOn
-%\makeatletter
-%\newcommand{\spell}[8]{
-%    \par\noindent\textbf{#1}
-%    \par\noindent\underline{0\ ниво}
-%    \@ifmtarg{#2}{\par\vspace{\topsep}}{\list_examples:n{#2}}
-%    \par\noindent\underline{1\ ниво}
-%    \@ifmtarg{#3}{\par\vspace{\topsep}}{\list_examples:n{#3}}
-%    \par\noindent\underline{2\ ниво}
-%    \@ifmtarg{#4}{\par\vspace{\topsep}}{\list_examples:n{#4}}
-%    \par\noindent\underline{3\ ниво}
-%    \@ifmtarg{#5}{\par\vspace{\topsep}}{\list_examples:n{#5}}
-%    \par\noindent\underline{4\ ниво}
-%    \@ifmtarg{#6}{\par\vspace{\topsep}}{\list_examples:n{#6}}
-%    \par\noindent\underline{5\ ниво}
-%    \@ifmtarg{#7}{\par\vspace{\topsep}}{\list_examples:n{#7}}
-%    \par\noindent\underline{6\ ниво}
-%    \@ifmtarg{#8}{\par\vspace{\topsep}}{\list_examples:n{#8}}
-%}
-%\makeatother
-%
-%\cs_new:Npn \list_examples:n #1{
-%    \seq_set_split:Nnn \splitted_seq{;}{#1}
-%    \begin{itemize}
-%        \seq_map_inline:Nn \splitted_seq{
-%            \item ##1
-%        }
-%    \end{itemize}
-%}
-%\ExplSyntaxOff
-%
-%
-%\begin{document}
-%
-%\spell{Small Heading}{example; example 2}{}{}{example 3}{}{}{}
-%
-%\end{document}
 
 \subsection{Заклинания} 
 
