@@ -1,9 +1,6 @@
-% This file declares a template formagic skill desription through examples
-% with specific difficulty values.
-
-% Here is an example on how to use it:
+% This file declares a template for player races. Here is an example on how to use it:
 %\begin{document}
-%\spell{Small Heading}{example; example 2}{}{}{example 3}{}{}{}
+%\race{Race name}{Point price}{}{}{example 3}{}{}{}
 %\end{document}
 
 \usepackage{xparse}
@@ -13,22 +10,19 @@
 
 \ExplSyntaxOn
 \makeatletter
-\newcommand{\race}[8]{
+\newcommand{\race}[2]{
     \par\noindent\textbf{#1}
-    \par\noindent\underline{0\ ниво}
-    \@ifmtarg{#2}{\par\vspace{\topsep}}{\list_examples:n{#2}}
-    \par\noindent\underline{1\ ниво}
-    \@ifmtarg{#3}{\par\vspace{\topsep}}{\list_examples:n{#3}}
-    \par\noindent\underline{2\ ниво}
-    \@ifmtarg{#4}{\par\vspace{\topsep}}{\list_examples:n{#4}}
-    \par\noindent\underline{3\ ниво}
-    \@ifmtarg{#5}{\par\vspace{\topsep}}{\list_examples:n{#5}}
-    \par\noindent\underline{4\ ниво}
-    \@ifmtarg{#6}{\par\vspace{\topsep}}{\list_examples:n{#6}}
-    \par\noindent\underline{5\ ниво}
-    \@ifmtarg{#7}{\par\vspace{\topsep}}{\list_examples:n{#7}}
-    \par\noindent\underline{6\ ниво}
-    \@ifmtarg{#8}{\par\vspace{\topsep}}{\list_examples:n{#8}}
+    \par\noindent{Цена:\ #2} \\
+                             \\
+    Точки:                   \\
+%    \par\noindent{Сила:\ #3}
+%    \par\noindent{Ловкост:\ #4}
+%    \par\noindent{Ум:\ $5}
+%    \par\noindent{Харизма:\ #6}
+%    \par\noindent\underline{5\ ниво}
+%    \@ifmtarg{#7}{\par\vspace{\topsep}}{\list_examples:n{#7}}
+%    \par\noindent\underline{6\ ниво}
+%    \@ifmtarg{#8}{\par\vspace{\topsep}}{\list_examples:n{#8}}
 }
 \makeatother
 
