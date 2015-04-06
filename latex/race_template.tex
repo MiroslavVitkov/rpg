@@ -12,12 +12,11 @@
 \makeatletter
 \newcommand{\race}[8]{
     \par\noindent\textbf{#1\ (#2)}
-                             \\
-    Точки:
     \par\noindent{Сила:\ #3}
     \par\noindent{Ловкост:\ #4}
     \par\noindent{Ум:\ #5}
     \par\noindent{Харизма:\ #6}
+                             \\
                              \\
     Качества:                \\
     \@ifmtarg{#7}{\par\vspace{\topsep}}{\race_template_perks{#7}}
