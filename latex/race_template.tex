@@ -12,19 +12,21 @@
 \makeatletter
 \newcommand{\race}[9]{
     \par\noindent\textbf{#1\ (#2)}
-    \@ifmtarg{#3}{}{\\ #3}             % Maintain consistent style between description provided and not provided cases.
-%    \@ifmtarg{#3}{\\}{\\ #3 \\}       % Comment above line and uncomment this for more space.
+%    \@ifmtarg{#3}{}{\\ #3}             % Maintain consistent style between description provided and not provided cases.
+    \@ifmtarg{#3}{\\}{\\ #3 \\}       % Comment above line and uncomment this for more space.
     \par\noindent{Сила:\ #4}
     \par\noindent{Ловкост:\ #5}
     \par\noindent{Ум:\ #6}
     \par\noindent{Харизма:\ #7}
                              \\
                              \\
-    Качества:                \\
+    Качества:
     \@ifmtarg{#7}{{\topsep}}{\race_template_perks{#8}}
                              
     Расови\ умения:
     \@ifmtarg{#8}{{\topsep}}{\race_template_skills{#9}}
+
+    \vspace{1cm}
 }
 \makeatother
 
