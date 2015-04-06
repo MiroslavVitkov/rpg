@@ -1,6 +1,6 @@
 % This file declares a template for player races. Here is an example on how to use it:
 %\begin{document}
-%\race{Race name}{Point price}{Strength}{Dexterity}{Mind}{Charisma}{Perks}{Race Skills}
+%\race{Race name}{Point price}{Desctiption}{Strength}{Dexterity}{Mind}{Charisma}{Perks}{Race Skills}
 %\end{document}
 
 \usepackage{xparse}
@@ -10,19 +10,21 @@
 
 \ExplSyntaxOn
 \makeatletter
-\newcommand{\race}[8]{
+\newcommand{\race}[9]{
     \par\noindent\textbf{#1\ (#2)}
-    \par\noindent{Сила:\ #3}
-    \par\noindent{Ловкост:\ #4}
-    \par\noindent{Ум:\ #5}
-    \par\noindent{Харизма:\ #6}
+    \@ifmtarg{#3}{}{\\ #3}             % Maintain consistent style between description provided and not provided cases.
+%    \@ifmtarg{#3}{\\}{\\ #3 \\}       % Comment above line and uncomment this for more space.
+    \par\noindent{Сила:\ #4}
+    \par\noindent{Ловкост:\ #5}
+    \par\noindent{Ум:\ #6}
+    \par\noindent{Харизма:\ #7}
                              \\
                              \\
     Качества:                \\
-    \@ifmtarg{#7}{{\topsep}}{\race_template_perks{#7}}
+    \@ifmtarg{#7}{{\topsep}}{\race_template_perks{#8}}
                              
     Расови\ умения:
-    \@ifmtarg{#8}{{\topsep}}{\race_template_skills{#8}}
+    \@ifmtarg{#8}{{\topsep}}{\race_template_skills{#9}}
 }
 \makeatother
 
