@@ -1,5 +1,3 @@
-.PHONY: fantasy
-
 fantasy:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
