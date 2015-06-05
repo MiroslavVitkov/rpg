@@ -1,0 +1,24 @@
+%  Character sheet source code. Compile with:
+%  pdflatex character_sheet.tex  && evince character_sheet.pdf
+
+\documentclass{article}
+
+\begin{document}
+
+%  This is an illustration how to glue two tables together.
+\begin{figure}
+\parbox{1.5cm}
+{
+\begin{tabular}{| l | c | c | c |}
+1 & 2 & 3 & 4
+\end{tabular}
+}
+\qquad
+\begin{minipage}{1.5cm}
+\begin{tabular}{l | c | c | c |}
+5 & 6 & 7 & 8
+\end{tabular}
+\end{minipage}
+\end{figure}
+
+\end{document}
