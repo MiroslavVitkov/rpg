@@ -30,6 +30,11 @@ sci-fi:
 	pdflatex --output-directory ../build/ elementaris-sci-fi.tex && \
 	evince ../build/elementaris-sci-fi.pdf
 
+charsheet:
+	cd latex && \
+	pdflatex --output-directory ../build/ rules/character_sheet.tex  && \
+	evince ../build/character_sheet.pdf
+
 help:
 	echo "Possible targets: fantasy, modern, sci-fi, all, help, clean."
 
