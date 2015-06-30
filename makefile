@@ -42,8 +42,13 @@ charsheet:
 	pdflatex --output-directory ../build/ rules/character_sheet.tex  && \
 	evince ../build/character_sheet.pdf
 
+adventures:
+	cd latex && \
+	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex  && \
+	evince ../build/sliapa_vrana.pdf
+
 help:
-	echo "Possible targets: fantasy, modern, sci-fi, steampunk, all, help, clean."
+	echo "Possible targets: fantasy, modern, sci-fi, steampunk, charsheet, adventures, all, help, clean."
 
 clean:
 	@rm -f build/*
