@@ -47,3 +47,29 @@
 \newcommand{\mychapter}{}  % A subsection title with an optional accompaning image.
 \newcommand{\smallrules}{}  % Under a small heading, list consicely several unrelated rules (paragraphs).
 % \newcommand{\alternateTableRowColor}{{\rowcolors}{1}{white}{lightgray}}  TODO: how to make this work?
+
+\newcommand{\weapon}[8]
+{
+\begin{multicols}{2}
+  \noindent \textbf{#2} \\
+  Необходима сила: #3  \\
+  Обсег: #4  \\
+  Щети: #5  \\
+  Свойства: #6  \\
+  Маса: #7  \\
+  Стойност: #8  \\
+  \includegraphics[height=0.13\textheight]{../images/#1}~
+\end{multicols}
+}
+
+\newcommand{\armor}[6]
+{
+\begin{multicols}{2}
+  \noindent \textbf{#2} \\
+  Покритие: #3  \\
+  Абсорбация: #4  \\
+  Маса: #5  \\
+  Стойност: #6  \\
+  \includegraphics[height=0.13\textheight]{../images/#1}~
+\end{multicols}
+}

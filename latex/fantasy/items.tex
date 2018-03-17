@@ -95,21 +95,6 @@ Some other figures: There will be one noble household per 200 population, one la
 \end{tabular}
 
 
-\subsection{Оръжия}
-\newcommand{\weapon}[8]
-{
-\begin{multicols}{2}
-  \noindent \textbf{#2} \\
-  Необходима сила: #3  \\
-  Обсег: #4  \\
-  Щети: #5  \\
-  Свойства: #6  \\
-  Маса: #7  \\
-  Стойност: #8  \\
-  \includegraphics[height=0.13\textheight]{../images/#1}~
-\end{multicols}
-}
-
 \weapon{knife}{Нож, кама}{3-9}{близък (0.3м)}{ниски (//-2)}{-}{0.3кг}{много евтин}
 \weapon{gladius}{Гладиус}{4-10}{близък (0.8м)}{средни (/-2/-2)}{-}{0.8кг}{евтин}
 \weapon{rapier}{Рапира}{4-10}{среден (1.2м)}{средни (+2/-2/0)}{-}{1кг}{среден}
@@ -148,13 +133,13 @@ Some other figures: There will be one noble household per 200 population, one la
 
 \subsection{Брони}
 
-\weapon{full_helm}{Пълен шлем}{-}{-}{-}{-}{1.5кг}{евтин}
-\weapon{great_helm}{Пълен шлем}{-}{-}{-}{-}{2кг}{евтин}
+\armor{full_helm}{Пълен шлем}{5}{10}{1.5кг}{евтин}
+\armor{great_helm}{Пълен шлем}{7}{10}{2кг}{евтин}
 
-\weapon{gambeson}{Гамбезон}{-}{-}{-}{-}{4кг}{много евтин}
-\weapon{hauberk}{Хауберк}{-}{-}{-}{-}{10кг}{евтин}
-\weapon{cuirasse}{Кираса}{-}{-}{-}{-}{10кг}{среден}
-\weapon{full_plate}{Пълна броня}{-}{-}{-}{-}{20кг}{скъп}
+\armor{gambeson}{Гамбезон}{торс 7, ръце 2, крака 2}{2}{4кг}{много евтин}
+\armor{hauberk}{Хауберк}{торс 7, ръце 2, крака 2}{6}{10кг}{евтин}
+\armor{cuirasse}{Кираса}{4}{10}{8кг}{среден}
+\armor{full_plate}{Пълна броня}{глава 10, торс 10, ръце 10, крака 10}{10}{20кг}{скъп}
 
 
 
