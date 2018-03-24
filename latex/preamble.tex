@@ -49,6 +49,11 @@
 \newcommand{\smallrules}{}  % Under a small heading, list consicely several unrelated rules (paragraphs).
 % \newcommand{\alternateTableRowColor}{{\rowcolors}{1}{white}{lightgray}}  TODO: how to make this work?
 
+\graphicspath{{../images/}}
+%\DeclareGraphicsRule{.jpg}{jpg}{.jpg}{`convert -geometry x200 #1 ../images/`basename #1 .jpg`-jpg-converted-to.jpg}
+%\DeclareGraphicsRule{.jpeg}{jpeg}{.jpeg}{`convert -geometry x300 #1 ../images/`basename #1 .jpeg`-jpeg-converted-to.jpeg}
+%\DeclareGraphicsRule{.png}{png}{.png}{`convert -geometry x200 #1 ../images/`basename #1 .png`-png-converted-to.png}
+
 \newcommand{\weapon}[8]
 {
 \begin{multicols}{2}
@@ -59,7 +64,7 @@
   Свойства: #6  \\
   Маса: #7  \\
   Стойност: #8  \\
-  \includegraphics[height=0.13\textheight]{../images/#1}~
+  \includegraphics[height=0.13\textheight]{#1}~
 \end{multicols}
 \vspace{0.01cm}
 }
@@ -73,7 +78,7 @@
   Свойства: #5  \\
   Маса: #6  \\
   Стойност: #7  \\
-  \includegraphics[height=0.13\textheight]{../images/#1}~
+  \includegraphics[height=0.13\textheight]{#1}~
 \end{multicols}
 \vspace{0.01cm}
 }
@@ -83,7 +88,7 @@
 \begin{multicols}{2}
   \noindent \textbf{#2} \\
   Стойност: #3  \\
-  \includegraphics[height=0.25\textheight]{../images/#1}
+  \includegraphics[height=0.25\textheight]{#1}
 \end{multicols}
 }
 
@@ -93,7 +98,7 @@
   \noindent \textbf{#2} \\
   Сила: #3  \\
   Стойност: #4  \\
-  \includegraphics[height=0.2\textheight]{../images/#1}
+  \includegraphics[height=0.2\textheight]{#1}
 \end{multicols}
 }
 
