@@ -80,9 +80,19 @@
 \newcommand{\building}[3]
 {
 \begin{multicols}{2}
-  Име: #2  \\
+  \noindent \textbf{#2} \\
   Стойност: #3  \\
-  \includegraphics[height=0.3\textheight]{../images/#1}
+  \includegraphics[height=0.25\textheight]{../images/#1}
+\end{multicols}
+}
+
+\newcommand{\animal}[4]
+{
+\begin{multicols}{2}
+  \noindent \textbf{#2} \\
+  Сила: #3  \\
+  Стойност: #4  \\
+  \includegraphics[height=0.2\textheight]{../images/#1}
 \end{multicols}
 }
 
