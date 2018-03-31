@@ -9,7 +9,8 @@ all:
 	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
 	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
 	pdflatex --output-directory ../build/ steampunk/steampunk.tex  && \
-	pdflatex --output-directory ../build/ steampunk/steampunk.tex
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
+	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex
 
 fantasy:
 	# Compiled twice in order to get the index correctly.
