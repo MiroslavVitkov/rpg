@@ -4,10 +4,12 @@ all:
 	cd latex && \
 	pdflatex --output-directory ../build/ fantasy/fantasy.tex && \
 	pdflatex --output-directory ../build/ fantasy/fantasy.tex && \
-	pdflatex --output-directory ../build/ elementaris-modern.tex  && \
-	pdflatex --output-directory ../build/ elementaris-modern.tex  && \
-	pdflatex --output-directory ../build/ elementaris-sci-fi.tex  && \
-	pdflatex --output-directory ../build/ elementaris-sci-fi.tex
+	pdflatex --output-directory ../build/ modern/modern.tex  && \
+	pdflatex --output-directory ../build/ modern/modern.tex  && \
+	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
+	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex  && \
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex
 
 fantasy:
 	# Compiled twice in order to get the index correctly.
@@ -19,23 +21,23 @@ fantasy:
 modern:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
-	pdflatex --output-directory ../build/ elementaris-modern.tex && \
-	pdflatex --output-directory ../build/ elementaris-modern.tex && \
-	evince ../build/elementaris-modern.pdf
+	pdflatex --output-directory ../build/ modern/modern.tex && \
+	pdflatex --output-directory ../build/ modern/modern.tex && \
+	evince ../build/modern.pdf
 
 sci-fi:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
-	pdflatex --output-directory ../build/ elementaris-sci-fi.tex && \
-	pdflatex --output-directory ../build/ elementaris-sci-fi.tex && \
-	evince ../build/elementaris-sci-fi.pdf
+	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex && \
+	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex && \
+	evince ../build/sci-fi.pdf
 
 steampunk:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
-	pdflatex --output-directory ../build/ elementaris-steampunk.tex && \
-	pdflatex --output-directory ../build/ elementaris-steampunk.tex && \
-	evince ../build/elementaris-steampunk.pdf
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
+	evince ../build/steampunk.pdf
 
 charsheet:
 	cd latex && \
@@ -48,7 +50,7 @@ adventures:
 	evince ../build/sliapa_vrana.pdf
 
 help:
-	echo "Possible targets: fantasy, modern, sci-fi, steampunk, charsheet, adventures, all, help, clean."
+	@echo "Possible targets: fantasy, modern, sci-fi, steampunk, charsheet, adventures, all, help, clean."
 
 clean:
 	@rm -f build/*

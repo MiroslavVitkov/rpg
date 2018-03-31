@@ -1,4 +1,6 @@
 rpg
 ===
+Elementaris - a tabletop role-playing game.
 
-Role-playing game, just the rules/manual.
+Large portions are taken from Bozhidar Grozdanov et. al.(2001, Sofia).
+Used images are not owned. 

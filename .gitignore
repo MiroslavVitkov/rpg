@@ -1,5 +1,3 @@
+*~
 build/
-!build/*.pdf
-
-*.tex~
-makefile~
+! build/*.pdf
