@@ -10,7 +10,8 @@ all:
 	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
 	pdflatex --output-directory ../build/ steampunk/steampunk.tex  && \
 	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
-	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex
+	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex  && \
+	pdflatex --output-directory ../build/ adventures/eaters_of_the_dead.tex
 
 fantasy:
 	# Compiled twice in order to get the index correctly.
@@ -48,7 +49,8 @@ charsheet:
 adventures:
 	cd latex && \
 	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex  && \
-	evince ../build/sliapa_vrana.pdf
+	pdflatex --output-directory ../build/ adventures/eaters_of_the_dead.tex  && \
+	evince ../build/eaters_of_the_dead.pdf
 
 help:
 	@echo "Possible targets: fantasy, modern, sci-fi, steampunk, charsheet, adventures, all, help, clean."
