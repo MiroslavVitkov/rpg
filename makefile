@@ -1,59 +1,81 @@
 all:
 	# Builds all targets, but does not open a preview. Inteded to be run
 	# when commiting code changes, so that binaries are kept up to date.
+	make fantasy-bare  && \
+	make modern-bare  && \
+	make sci-fi-bare  && \
+	make steampunk-bare  && \
+	make charsheet-bare  && \
+	make adventures-bare
+
+
+fantasy-bare:
+	# Compiled twice in order to get the index correctly.
 	cd latex && \
 	pdflatex --output-directory ../build/ fantasy/fantasy.tex && \
-	pdflatex --output-directory ../build/ fantasy/fantasy.tex && \
-	pdflatex --output-directory ../build/ modern/modern.tex  && \
-	pdflatex --output-directory ../build/ modern/modern.tex  && \
-	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
-	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex  && \
-	pdflatex --output-directory ../build/ steampunk/steampunk.tex  && \
-	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
-	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex  && \
-	pdflatex --output-directory ../build/ adventures/eaters_of_the_dead.tex
+	pdflatex --output-directory ../build/ fantasy/fantasy.tex
+
 
 fantasy:
+	make fantasy-bare  && \
+	evince build/fantasy.pdf
+
+
+modern-bare:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
-	pdflatex --output-directory ../build/ fantasy/fantasy.tex && \
-	pdflatex --output-directory ../build/ fantasy/fantasy.tex && \
-	evince ../build/fantasy.pdf
+	pdflatex --output-directory ../build/ modern/modern.tex && \
+	pdflatex --output-directory ../build/ modern/modern.tex
+
 
 modern:
+	make modern-bare  && \
+	evince build/modern.pdf
+
+
+sci-fi-bare:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
-	pdflatex --output-directory ../build/ modern/modern.tex && \
-	pdflatex --output-directory ../build/ modern/modern.tex && \
-	evince ../build/modern.pdf
+	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex && \
+	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex
+
 
 sci-fi:
+	make sci-fi  && \
+	evince build/sci-fi.pdf
+
+
+steampunk-bare:
 	# Compiled twice in order to get the index correctly.
 	cd latex && \
-	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex && \
-	pdflatex --output-directory ../build/ sci-fi/sci-fi.tex && \
-	evince ../build/sci-fi.pdf
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
+	pdflatex --output-directory ../build/ steampunk/steampunk.tex
+
 
 steampunk:
-	# Compiled twice in order to get the index correctly.
+	make steampunk  && \
+	evince build/steampunk.pdf
+
+
+charsheet-bare:
 	cd latex && \
-	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
-	pdflatex --output-directory ../build/ steampunk/steampunk.tex && \
-	evince ../build/steampunk.pdf
+	pdflatex --output-directory ../build/ rules/character_sheet.tex
+
 
 charsheet:
-	cd latex && \
-	pdflatex --output-directory ../build/ rules/character_sheet.tex  && \
-	evince ../build/character_sheet.pdf
+	make charsheet-bare  && \
+	evince build/character_sheet.pdf
 
-adventures:
-	cd latex && \
-	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex  && \
-	pdflatex --output-directory ../build/ adventures/eaters_of_the_dead.tex  && \
-	evince ../build/eaters_of_the_dead.pdf
 
+adventures-bare:
+	cd latex && \
+	pdflatex --output-directory ../build/ adventures/sliapa_vrana.tex
+
+
+.PHONY: help
 help:
-	@echo "Possible targets: fantasy, modern, sci-fi, steampunk, charsheet, adventures, all, help, clean."
+	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
+
 
 clean:
 	@rm -f build/*
