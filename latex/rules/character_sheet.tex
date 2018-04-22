@@ -18,20 +18,11 @@
 \begin{document}
 % page 0: Body
 \section{Тяло}
-% Apearance
-\extrarowsep=4cm
-\noindent
-\begin{tabular}{|p{\textwidth}|}
-\hline
-{\tiny Външен вид}  \\
-\hline
-\end{tabular}
-
 % Items
 \begin{multicols}{2}
-\extrarowsep=3cm
+\extrarowsep=3.8cm
 \noindent
-\begin{tabular}{|p{7cm}|}
+\begin{tabular}{|p{8cm}|}
 \hline
 {\tiny Оръжия}  \\
 \hline
@@ -43,11 +34,21 @@
 \hline
 {\tiny Дисаги}  \\
 \hline
-{\tiny Имот}  \\
+{\tiny Имоти}  \\
+\hline
+\end{tabular}
+
+% Appearance
+\extrarowsep=4cm
+\noindent
+\begin{tabular}{|p{0.5\textwidth}|}
+\hline
+{\tiny Външен вид}  \\
 \hline
 \end{tabular}
 
 % Силa
+\begin{multicols}{2}
 \extrarowsep=1cm
 \begin{tabular}{|p{2cm}|}
 \hline
@@ -64,16 +65,19 @@
 \end{tabular}
 
 \extrarowsep=4cm
+\noindent
 \begin{tabular}{|p{4cm}|}
 \hline
 {\tiny Рани}  \\
 \hline
 \end{tabular}
+\end{multicols}
 
 \begin{footnotesize}
 \extrarowsep=0cm
+\noindent
 \rowcolors{1}{white}{lightgray}
-\begin{tabular}{l | c | c | c}
+\begin{tabular}[b]{l | c | c | c}
 Сила    & ниски & средни & високи  \\
 1  & d-3  & d-3  & d-2   \\
 2  & d-3  & d-2  & d-1   \\
@@ -107,8 +111,10 @@
 30 & 4d+1 & 6d   & 8d+2
 \end{tabular}
 
+\vspace{0.3cm}
+\noindent
 \rowcolors{1}{white}{lightgray}
-\begin{tabular}{l | l | l | l }
+\begin{tabular}[b]{l | l | l | l }
 Максимален товар, кг & Придвижване, м/ход       & Модификация  \\
 Сила                 & Сила + Ловкост + Ловкост & 0            \\
 Сила * 2             & Сила + Ловкост           & 0            \\
@@ -151,12 +157,20 @@
 \end{tabular}
 \end{multicols}
 
+\begin{multicols}{2}
 \extrarowsep=1cm
 \begin{tabular}{|p{2cm}|}
 \hline
 {\tiny Ум}  \\
 \hline
 {\tiny Чар}  \\
+\hline
+\end{tabular}
+
+\extrarowsep=4cm
+\begin{tabular}{|p{4cm}|}
+\hline
+{\tiny Дарби}  \\
 \hline
 \end{tabular}
 
@@ -173,5 +187,14 @@
 \hline
 \end{tabular}
 \end{tiny}
+
+\extrarowsep=13cm
+\noindent
+\begin{tabular}{|p{6cm}|}
+\hline
+{\tiny Умения}  \\
+\hline
+\end{tabular}
+\end{multicols}
 
 \end{document}
