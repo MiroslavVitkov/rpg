@@ -1,35 +1,177 @@
 %  Character sheet source code. Compile with:
 %  pdflatex character_sheet.tex  && evince character_sheet.pdf
 
+% todo: how best to fix to two pges?
 \documentclass{article}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
-\usepackage{iwona}
+%\usepackage{iwona}
+\usepackage{tabu}
+\usepackage{multicol}
+\usepackage[table]{xcolor}     % For coloured rows within tables.
+\usepackage[margin=1cm]{geometry}
 
+\renewcommand\thesection{}
 
 \begin{document}
-
-\begin{tabular}{|c|}
-Име
+% page 0: Body
+\section{Тяло}
+% Apearance
+\extrarowsep=4cm
+\noindent
+\begin{tabular}{|p{\textwidth}|}
+\hline
+{\tiny Външен вид}  \\
+\hline
 \end{tabular}
 
+% Items
+\begin{multicols}{2}
+\extrarowsep=3cm
+\noindent
+\begin{tabular}{|p{7cm}|}
+\hline
+{\tiny Оръжия}  \\
+\hline
+{\tiny Брони}  \\
+\hline
+{\tiny Екипировка}  \\
+\hline
+{\tiny Раница}  \\
+\hline
+{\tiny Дисаги}  \\
+\hline
+{\tiny Имот}  \\
+\hline
+\end{tabular}
 
-%  This is an illustration how to glue two tables together.
-\begin{figure}
-\parbox{1.5cm}
-{
-\begin{tabular}{| l | c | c | c |}
-1 & 2 & 3 & 4
+% Силa
+\extrarowsep=1cm
+\begin{tabular}{|p{2cm}|}
+\hline
+{\tiny Сила}  \\
+\hline
 \end{tabular}
-}
-\qquad
-\begin{minipage}{1.5cm}
-\begin{tabular}{l | c | c | c |}
-5 & 6 & 7 & 8
+
+% Ловкост
+\extrarowsep=1cm
+\begin{tabular}{|p{2cm}|}
+\hline
+{\tiny Ловкост}  \\
+\hline
 \end{tabular}
-\end{minipage}
-\end{figure}
+
+\extrarowsep=4cm
+\begin{tabular}{|p{4cm}|}
+\hline
+{\tiny Рани}  \\
+\hline
+\end{tabular}
+
+\begin{footnotesize}
+\extrarowsep=0cm
+\rowcolors{1}{white}{lightgray}
+\begin{tabular}{l | c | c | c}
+Сила    & ниски & средни & високи  \\
+1  & d-3  & d-3  & d-2   \\
+2  & d-3  & d-2  & d-1   \\
+3  & d-2  & d-1  & d-1   \\
+4  & d-2  & d-1  & d+1   \\
+5  & d-1  & d    & d+2   \\
+6  & d-1  & d    & d+3   \\
+7  & d    & d+1  & 2d    \\
+8  & d+1  & d+2  & 2d+1  \\
+9  & d+1  & 2d-1 & 2d+2  \\
+10 & d+2  & 2d   & 3d    \\
+11 & d+2  & 2d   & 3d+1  \\
+12 & 2d-1 & 2d+1 & 3d+2  \\
+13 & 2d-1 & 2d+2 & 3d+3  \\
+14 & 2d   & 3d-1 & 4d    \\
+15 & 2d+1 & 3d   & 4d+1  \\
+16 & 2d+1 & 3d+1 & 4d+2  \\
+17 & 2d+2 & 3d+1 & 5d    \\
+18 & 2d+2 & 3d+2 & 5d+1  \\
+19 & 3d-1 & 4d-1 & 5d+2  \\
+20 & 3d-1 & 4d   & 5d+3  \\
+21 & 3d   & 4d   & 6d    \\
+22 & 3d+1 & 4d+1 & 6d+1  \\
+23 & 3d+1 & 4d+2 & 6d+2  \\
+24 & 3d+2 & 5d-1 & 7d    \\
+25 & 3d+2 & 6d   & 7d+1  \\
+26 & 4d-1 & 5d   & 7d+2  \\
+27 & 4d-1 & 5d+1 & 7d+3  \\
+28 & 4d   & 5d+2 & 8d    \\
+29 & 4d+1 & 6d-1 & 8d+1  \\
+30 & 4d+1 & 6d   & 8d+2
+\end{tabular}
+
+\rowcolors{1}{white}{lightgray}
+\begin{tabular}{l | l | l | l }
+Максимален товар, кг & Придвижване, м/ход       & Модификация  \\
+Сила                 & Сила + Ловкост + Ловкост & 0            \\
+Сила * 2             & Сила + Ловкост           & 0            \\
+Сила * 5             & Сила                     & -5
+\end{tabular}
+\end{footnotesize}
+\end{multicols}
+
+
+% page 1: Mind
+\section{Дух}
+% Именa и прякори
+\extrarowsep=0.5cm
+\noindent
+\begin{tabular}{|p{\textwidth}|}
+\hline
+{\tiny Имена и прякори}  \\
+\hline
+\end{tabular}
+
+\begin{multicols}{2}
+\extrarowsep=3cm
+\noindent
+\begin{tabular}{|p{0.48\textwidth}|}
+\hline
+{\tiny Детство}  \\
+\hline
+{\tiny Юношество}  \\
+\hline
+{\tiny Зрялост}  \\
+\hline
+\end{tabular}
+
+\extrarowsep=10cm
+\noindent
+\begin{tabular}{|p{0.48\textwidth}|}
+\hline
+{\tiny Познти}  \\
+\hline
+\end{tabular}
+\end{multicols}
+
+\extrarowsep=1cm
+\begin{tabular}{|p{2cm}|}
+\hline
+{\tiny Ум}  \\
+\hline
+{\tiny Чар}  \\
+\hline
+\end{tabular}
+
+\begin{tiny}
+\extrarowsep=0.5cm
+\noindent
+\begin{tabular}{|c c c c|}
+\hline
+догматичен & логичен & емоционален & adrenaline junkie  \\
+небрежен & спонтанен & надежден & инат  \\
+мълчалив & резервиран & общителен & властен  \\
+груб & съревноваващ се & съчувстващ & наивен  \\
+нервак & самокритичен & спокоен & апатичен  \\
+\hline
+\end{tabular}
+\end{tiny}
 
 \end{document}
