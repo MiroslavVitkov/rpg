@@ -30,6 +30,14 @@
 \usepackage{enumitem}          % Customize enumerate, itemize, list.
 \usepackage{qtree}             % https://ctan.org/tex-archive/macros/latex/contrib/qtree/
 
+% Make Table of Contents clickable.
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=black,  %choose some color if you want links to stand out
+}
+
 % Macros, declared in separate headers.
 \include{spell_template}
 \include{race_template}
