@@ -59,12 +59,12 @@ steampunk:
 
 charsheet-bare:
 	cd latex && \
-	pdflatex --output-directory ../build/ rules/character_sheet.tex
+	pdflatex --output-directory ../build/ rules/charsheet.tex
 
 
 charsheet:
 	make charsheet-bare  && \
-	evince build/character_sheet.pdf
+	evince build/charsheet.pdf
 
 
 adventures-bare:
